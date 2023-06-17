@@ -1,16 +1,9 @@
-// Question: Modify the previous program to include an HTTP header with the content type 'text/html' in the server response.
+// Write a JavaScript program to sum 3 and 5 multiples under 1000.
 
-const http = require('http');
-
-const hostname = 'localhost';
-const port = 3000;
-
-const server = http.createServer((req, res) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/html');
-    res.end('<html><body><h1>Hello World!</h1></body></html>');
-});
-
-server.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
-});
+let sum = 0;
+for (let i = 1; i < 1000; i++) {
+    if (i % 3 === 0 || i % 5 === 0) {
+        sum += i;
+    }
+}
+console.log(sum);

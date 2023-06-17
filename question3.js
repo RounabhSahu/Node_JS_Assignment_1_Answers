@@ -1,19 +1,22 @@
-// Question: Write a JavaScript program that uses a for loop to iterate over the characters in a string and counts the number of vowels.
+// Write a JavaScript function to find the largest of five numbers. Display an alert box to show the results.
+//     Sample numbers : -5, -2, -6, 0, -1
+//     Output : 0
 
-const readline = require('readline').createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
-
-readline.question("Enter the string: ", str => {
-    let vowels = 0;
-    for (let i = 0; i < str.length; i++) {
-        if (str[i] === 'a' || str[i] === 'e' ||
-            str[i] === 'i' || str[i] === 'o' ||
-            str[i] === 'u') {
-            vowels++;
-        }
+function findLargest(num1, num2, num3, num4, num5) {
+    let largest = num1;
+    if (num2 > largest) {
+        largest = num2;
     }
-    console.log('No. of Vowels : ',vowels);
-    readline.close();
-});
+    if (num3 > largest) {
+        largest = num3;
+    }
+    if (num4 > largest) {
+        largest = num4;
+    }
+    if (num5 > largest) {
+        largest = num5;
+    }
+    alert("The largest number is " + largest);
+}
+
+findLargest(-5, -2, -6, 0, -1);

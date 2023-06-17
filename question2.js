@@ -1,12 +1,10 @@
-// Question: Write a JavaScript program that uses a while loop to calculate the sum of numbers from 1 to 10.
+// Write a JavaScript function to find the sign of the product of three numbers. Display an alert box with the specified sign.
+//     Sample numbers : 3, -7, 2
+//     Output : The sign is -
 
-
-let i = 1;
-let sum = 0;
-
-while (i <= 10) {
-    sum += i;
-    i++;
+function signOfProduct(num1, num2, num3) {
+    let product = num1 * num2 * num3;
+    let sign = product < 0 ? "-" : (product > 0 ? "+" : "no");
+    alert("The sign is " + sign);
 }
-
-console.log(sum);
+signOfProduct(3, -7, 2);
